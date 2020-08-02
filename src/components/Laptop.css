@@ -1,0 +1,232 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Bree Serif", serif;
+}
+
+header {
+  display: flex;
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+  display: flex;
+}
+
+.logo-container {
+  user-select: none;
+  cursor: pointer;
+  flex: 1;
+}
+.logo {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0.5rem;
+}
+nav {
+  flex: 2;
+}
+.nav-links {
+  justify-content: space-around;
+  list-style: none;
+}
+.nav-link a {
+  user-select: none;
+  color: gray;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.nav-link a:hover {
+  color: black;
+}
+.cart {
+  user-select: none;
+  cursor: pointer;
+  flex: 1;
+  justify-content: flex-end;
+}
+.cart:hover {
+  filter: drop-shadow(0rem 0.5rem 0.3rem gray);
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  letter-spacing: 0.3rem;
+  font-size: 4.4rem;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #858772;
+}
+
+.cta {
+  padding: 5rem 0rem 0rem 0rem;
+}
+
+.cta-select {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  border: none;
+  background: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 140, 204));
+  /* background: rgb(0, 0, 255); */
+  width: 15rem;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+}
+.cta-select:hover {
+  background: linear-gradient(to right, rgb(81, 81, 199), rgb(16, 16, 177));
+}
+
+.cta-add {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  border: none;
+  background: linear-gradient(to left, rgb(255, 0, 0), rgb(236, 67, 67));
+  /* background: rgb(255, 0, 0); */
+  width: 15rem;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  margin: 3rem 0rem 0rem 2rem;
+}
+.cta-add:hover {
+  background: linear-gradient(to right, rgb(143, 33, 33), rgb(230, 39, 39));
+}
+
+.cover {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+.cover img {
+  height: 100%;
+  filter: drop-shadow(0rem 0.5rem 0.3rem gray);
+  animation: drop 1.5s ease;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  z-index: -1;
+  opacity: 0.5;
+  height: 90vh;
+}
+
+.midum-circle {
+  position: absolute;
+  top: 30vh;
+  right: 60vh;
+  opacity: 0.5;
+  z-index: -1;
+  height: 60vh;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0vh;
+  left: 20%;
+  z-index: -1;
+}
+
+.latop-select {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 20%;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .introduction p {
+    font-size: 1.7rem;
+  }
+  .cta {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .latop-select {
+    bottom: 5%;
+    right: 50%;
+    width: 50%;
+    transform: translate(50%, 5%);
+  }
+  .cover img {
+    height: 80%;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-link a {
+    font-size: small;
+  }
+  .small-circle,
+  .midum-circle,
+  .big-circle {
+    opacity: 0.2;
+  }
+  .cta-select {
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 4rem;
+  }
+  .cta-add {
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 4rem;
+  }
+}
